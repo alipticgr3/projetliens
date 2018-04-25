@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/mytheme.css" type="text/css">
+  <!-- <link rel="stylesheet" href="css/fontawesome-all.css">-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <title>Gestionnaire de Liens</title>
+</head>
+
+<body class="bg-light">
+  <!--<nav class="navbar navbar-expand-md navbar-dark bg-secondary">-->
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary" >
+    <div class="container">
+      <h1 class="">Annuaire de liens internet</h1>
+      <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <i class="fas fa-user-circle fa-lg"></i>&nbsp; Admin</button>
+          <div class="dropdown-menu">
+            <form class="p-1">
+              <div class="form-group" id="Login">
+                <label>Administrateur</label>
+                <input type="text" class="form-control mb-2" placeholder="Votre identifiant">
+                <label>Mot de passe</label>
+                <input type="password" class="form-control mb-2" placeholder="**********"> </div>
+              <button type="submit" class="btn btn-primary d-flex">Connexion</button>
+            </form>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+  <div class="main">
+    <div class="py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <form class="">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Recherche">
+                <small class="form-text text-muted">Exemple de mots-clefs : Informatique, Loisirs, Limoges</small>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4"> </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-group">
+              <button class="btn dropdown-toggle btn-secondary" data-toggle="dropdown"> Trier par</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Du + au - récent</a>
+                <a class="dropdown-item" href="#">Du - au + récent</a>
+                <a id="trialpha" class="dropdown-item" href="#">Par ordre alphabétique</a>
+              </div>
+            </div>
+            <div class="btn-group">
+              <button class="btn dropdown-toggle btn-secondary" data-toggle="dropdown"> Catégories</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Sport</a>
+                <a class="dropdown-item" href="#">Musique</a>
+                <a class="dropdown-item" href="#">Cinéma</a>
+              </div>
+            </div>
+            <a class="btn btn-secondary" href="#">Tous les liens</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-0">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!--<div>-->
+              <ul class="list-group">
+                <li class="list-group-item border border-dark p-1">
+                  <a class="page-link m-0 p-0 border-0" href="#">
+                    <img class="float-left mr-1" src="images/bootstrap.png">
+                    <p class="lead m-0">Bootstrap </p>
+                    <span class="float-right">
+                      <small>Il y a 10 minutes</small>
+                    </span>
+                    <p class="mb-0">Tout ce que vous avez toujours voulu savoir sur le responsive...</p>
+                    <small>Informatique, webDesign, CSS</small>
+                  </a>
+                </li>
+                <li class="list-group-item border border-dark p-1">
+                  <a class="page-link m-0 p-0 border-0" href="#">
+                    <img class="float-left mr-1" src="images/wow.png">
+                    <p class="lead m-0">Word of Warcaraft </p>
+                    <span class="float-right">
+                      <small>Il y a 1 heure</small>
+                    </span>
+                    <p class="">Un petit tour dans le monde merveilleux de Blizzard...</p>
+                    <small>Loisirs, Jeux en ligne</small>
+                  </a>
+                </li>
+                <li class="list-group-item border border-dark p-1">
+                  <a class="page-link m-0 p-0 border-0" href="#">
+                    <img class="float-left mr-1" src="images/limoges.png">
+                    <p class="lead m-0">Sortir à Limoges </p>
+                    <span class="float-right">
+                      <small>Il y a 2 jours</small>
+                    </span>
+                    <p class="">Vous ne savez pas quoi faire ce soir, demain ou ce week-end...</p>
+                    <small>Loisirs, Culture, Limoges</small>
+                  </a>
+                </li>
+                <li class="list-group-item border border-dark p-1">
+                  <a class="page-link m-0 p-0 border-0" href="#">
+                    <img class="float-left mr-1" src="images/logo.png">
+                    <p class="lead m-0">Lien XXX </p>
+                    <span class="float-right">
+                      <small>Il y a 5 jours</small>
+                    </span>
+                    <p class="">Brève description...</p>
+                    <small>Mot-clef 1, Mot-clef 2, etc...</small>
+                  </a>
+                </li>
+                <li class="list-group-item border border-dark p-1">
+                  <a class="page-link m-0 p-0 border-0" href="#">
+                    <img class="float-left mr-1" src="images/logo.png">
+                    <p class="lead m-0">Lien XXX </p>
+                    <span class="float-right">
+                      <small>Il y a 5 jours</small>
+                    </span>
+                    <p class="">Brève description...</p>
+                    <small>Mot-clef 1, Mot-clef 2, etc...</small>
+                  </a>
+                </li>
+                <li class="list-group-item border border-dark p-1">
+                  <a class="page-link m-0 p-0 border-0" href="#">
+                    <img class="float-left mr-1" src="images/logo.png">
+                    <p class="lead m-0">Lien XXX </p>
+                    <span class="float-right">
+                      <small>Il y a 5 jours</small>
+                    </span>
+                    <p class="">Brève description...</p>
+                    <small>Mot-clef 1, Mot-clef 2, etc...</small>
+                  </a>
+                </li>
+              </ul>
+            <!--</div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="container bg-secondary mt-3 py-2">
+      <h6>FoOtEr</h6>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
