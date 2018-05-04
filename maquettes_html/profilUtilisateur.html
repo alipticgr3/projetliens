@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/mytheme.css" type="text/css">
+	<link rel="icon">
+	<title>Annuaire de Liens - Gestion Utilisateurs</title>
+</head>
+
+<body class="bg-light" >
+
+	<!-- Barre de navigation -->
+	<nav class="navbar navbar-light navbar-expand-md bg-secondary">
+		<div class="container">
+			<h1>Annuaire de liens internet</h1>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="true" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse text-center justify-content-end" id="navbarAdmin">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="adminLiens.html"><i class="fas fa-link"></i>&nbsp; Liens</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gestionUtilisateurs.html"><i class="fas fa-users"></i>&nbsp; Utilisateurs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="profilUtilisateur.html"><i class="fas fa-user"></i>&nbsp; Profil</a>
+					</li>
+					<li class="nav-item">
+						<a class="btn btn-primary" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Déconnexion"><i class="fas fa-power-off"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	
+	<div class="container">
+		<div class="row mt-2">
+			<div class="col-md-2 mb-2">
+			</div>
+			<div class="col-md-8 mb-2">
+				<!-- Carte du Profil Utilisteur -->
+				<div class="card">
+					<div class="card-header bg-user">
+						<h5 class="text-center">Votre Profil</h5>
+					</div>
+					<div class="card-body">
+						<p>Nom : <h5>MonNomAdmin</h5></p>
+						<p>Prénom : <h5>MonPrénomAdmin</h5></p>
+						<p>Email : <h5>monemail@admin.fr</h5></p>
+						<p>Mon Mdp : <h5>admin</h5></p>
+					</div>
+					<div class="card-footer">
+						<div class="btn-group float-right">
+							<button class="btn btn-warning float-right" type="button"><i class="fas fa-edit fa-lg"></i>&nbsp; Modifier</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2 mb-2">
+			</div>
+		</div>
+	</div>
+
+	<!-- Bas de page -->
+	<section class="bg-secondary p-2">
+		<div class="container">
+			<h3>Footer</h3>
+		</div>
+	</section>
+	
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip(); 
+	});
+</script>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/mytheme.css" type="text/css">
+	<link rel="icon">
+	<title>Annuaire de Liens - Espace Liens</title>
+</head>
+
+<body class="bg-light" >
+
+	<!-- Barre de navigation -->
+	<nav class="navbar navbar-light navbar-expand-md bg-secondary">
+		<div class="container">
+			<h1>Annuaire de liens internet</h1>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="true" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse text-center justify-content-end" id="navbarAdmin">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="adminLiens.html"><i class="fas fa-link"></i>&nbsp; Liens</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gestionUtilisateurs.html"><i class="fas fa-users"></i>&nbsp; Utilisateurs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="profilUtilisateur.html"><i class="fas fa-user"></i>&nbsp; Profil</a>
+					</li>
+					<li class="nav-item">
+						<a class="btn btn-primary" href="indexVisiteur.html" data-toggle="tooltip" data-placement="bottom" title="Déconnexion"><i class="fas fa-power-off"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row mt-2 align-items-center">
+
+			<!-- Champs de recherche -->
+			<div class="col-md-6">
+				<form action="#">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Recherche par mots-clés">
+						<div class="input-group-append">
+							<button class="btn btn-secondary" type="submit"><i class="fas fa-search"></i></button>
+						</div>
+					</div>
+					<small class="form-text text-muted">Exemple de mots-clefs : Informatique, Loisirs, Limoges</small>
+				</form>
+			</div>
+
+			<!-- Ajout d'un Lien -->
+			<div class="col-md-6">
+				<form action="nouveauLien.html" method="POST">
+					<div class="card">
+						<div class="card-header bg-add">
+							<h5 class="text-center">Ajouter un lien</h5>
+						</div>
+						<div class="card-body"> 
+							<div class="input-group" >
+								<input name="nomLien" type="text" class="form-control" placeholder="Nom du lien">
+								<input name="urlLien" type="text" class="form-control" placeholder="URL du lien">
+								<div class="input-group-append">
+									<button type="submit" class="btn btn-secondary input-group-append" type="button"><i class="fas fa-plus-circle fa-lg"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Outils de tri -->
+	<div class="container">
+		<div class="row mt-2">
+			<div class="col-md-12">
+				<div class="btn-group">
+					<button class="btn dropdown-toggle btn-primary" data-toggle="dropdown"> Trier par</button>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">Du + au - récent</a>
+						<a class="dropdown-item" href="#">Du - au + récent</a>
+						<a id="trialpha" class="dropdown-item" href="#">Par ordre alphabétique</a>
+					</div>
+				</div>
+				<a class="btn btn-primary" href="#">Tous les liens</a>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Bloc liens -->
+	<div class="container">
+
+		<!-- Ligne -->
+		<div class="row mb-2">
+		
+			<!-- Colonne 1 -->
+			<div class="col-md-4">
+		
+				<!-- Carte du lien -->
+				<div class="card mt-2">
+					<a class="card-header bg-link" href="#" data-toggle="modal" data-target="#lienModal1"><h3 class="text-center">Bootstrap</h3></a>
+					<div class="card-body">
+						<h5>Tout ce que vous avez toujours voulu savoir sur le responsive</h5>
+						<p class="text-muted">Créez des projets responsive et mobiles sur le Web avec la bibliothèque de composants front-end la plus populaire au monde...</p>
+					</div>
+					<div class="card-footer">
+						<ul class="list-inline float-left">
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 1</a></li>
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 2</a></li>
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 3</a></li>
+						</ul>
+						<a class="btn btn-primary float-right" href="https://getbootstrap.com/" target="_blank" role="button">Visiter &nbsp;<i class="fa d-inline fa-lg fa-link"></i></a>
+					</div>
+					
+				</div>
+
+				<!-- Fenêtre modale de du lien -->
+				<div class="modal fade" id="lienModal1" tabindex="-1" role="dialog" aria-labelledby="lienModal1" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header bg-link">
+								<h3 class="modal-title" id="titreLienModal">Bootstrap</h3>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-4">
+										<a href="https://getbootstrap.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/1/13/TwitterBootstrap.png" alt="Logo Bootstrap" class="img-thumbnail"></a>
+									</div>
+									<div class="col-md-8">
+										<h5>Tout ce que vous avez toujours voulu savoir sur le responsive...</h5>
+										<p class="text-muted">Créez des projets responsive et mobiles sur le Web avec la bibliothèque de composants frontaux la plus populaire au monde.
+										<br />
+										Bootstrap est une boîte à outils open source pour le développement avec HTML, CSS et JS. Prototypez rapidement vos idées ou créez votre application entière avec nos variables et mixins Sass, un système de grille responsive, de nombreux composants prédéfinis et de puissants plugins construits sur jQuery.</p>
+										<p class="float-right font-italic">Liens créé le **/**/**** par Utilisateur</p>
+										<br/><br/>
+										<a class="btn btn-primary float-right" href="#" role="button"> Accéder au site &nbsp;<i class="fa d-inline fa-lg fa-link"></i></a>
+										<ul class="list-inline float-left">
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 1</a></li>
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 2</a></li>
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 3</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+									<button class="btn btn-warning float-right" type="button" data-toggle="modal" data-target="#editModal" data-dismiss="modal"><i class="fas fa-edit fa-lg"></i></button>
+									<button class="btn btn-danger float-right" type="button" data-dismiss="modal"><i class="fas fa-trash-alt fa-lg"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Colonne 2 -->
+			<div class="col-md-4">
+		
+				<!-- Carte du lien -->
+				<div class="card mt-2">
+					<a class="card-header bg-link" href="#" data-toggle="modal" data-target="#lienModal2"><h3 class="text-center">Qwant</h3></a>
+					<div class="card-body">
+						<h5>Moteur de recherche français</h5>
+						<p class="text-muted">Qwant annonce ne pas tracer ses utilisateurs ni vendre leurs données personnelles afin de garantir leur vie privée et se veut neutre dans l'affichage des résultats...</p>
+					</div>
+					<div class="card-footer">
+						<ul class="list-inline float-left">
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 2</a></li>
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 4</a></li>
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 5</a></li>
+						</ul>
+						<a class="btn btn-primary float-right" href="https://www.qwant.com/" target="_blank" role="button">Visiter &nbsp;<i class="fa d-inline fa-lg fa-link"></i></a>
+					</div>
+					
+				</div>
+
+				<!-- Fenêtre modale de du lien -->
+				<div class="modal fade" id="lienModal2" tabindex="-1" role="dialog" aria-labelledby="lienModal2" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header bg-link">
+								<h3 class="modal-title" id="titreLienModal">Qwant</h3>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-4">
+										<a href="https://www.qwant.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/46/Qwant_Logo.svg/707px-Qwant_Logo.svg.png" alt="Logo Qwant" class="img-thumbnail"></a>
+									</div>
+									<div class="col-md-8">
+										<h5>Moteur de recherche français</h5>
+										<p class="text-muted">Qwant annonce ne pas tracer ses utilisateurs ni vendre leurs données personnelles afin de garantir leur vie privée et se veut neutre dans l'affichage des résultats. 
+										<br />
+										Il a été créé le 16 février 2013, puis lancé en version définitive le 4 juillet 2013.</p>
+										<p class="float-right font-italic">Liens créé le **/**/**** par Utilisateur</p>
+										<br/><br/>
+										<a class="btn btn-primary float-right" href="https://www.qwant.com/" role="button"> Accéder au site &nbsp;<i class="fa d-inline fa-lg fa-link"></i></a>
+										<ul class="list-inline float-left">
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 1</a></li>
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 2</a></li>
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 3</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+									<button class="btn btn-warning float-right" type="button" data-toggle="modal" data-target="#editModal" data-dismiss="modal"><i class="fas fa-edit fa-lg"></i></button>
+									<button class="btn btn-danger float-right" type="button" data-dismiss="modal"><i class="fas fa-trash-alt fa-lg"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Colonne 3 -->
+			<div class="col-md-4">
+		
+				<!-- Carte du lien -->
+				<div class="card mt-2">
+					<a class="card-header bg-link" href="#" data-toggle="modal" data-target="#lienModal3"><h3 class="text-center">Hearthstone</h3></a>
+					<div class="card-body">
+						<h5>Jeu de carte en ligne</h5>
+						<p class="text-muted">Hearthstone (anciennement Hearthstone: Heroes of Warcraft) est un jeu de cartes à collectionner en ligne, développé et édité par la société Blizzard Entertainment.</p>
+					</div>
+					<div class="card-footer">
+						<ul class="list-inline float-left">
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 6</a></li>
+							<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 7</a></li>
+						</ul>
+						<a class="btn btn-primary float-right" href="https://playhearthstone.com/fr-fr/" target="_blank" role="button">Visiter &nbsp;<i class="fa d-inline fa-lg fa-link"></i></a>
+					</div>
+					
+				</div>
+
+				<!-- Fenêtre modale du lien -->
+				<div class="modal fade" id="lienModal3" tabindex="-1" role="dialog" aria-labelledby="lienModal3" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header bg-link">
+								<h3 class="modal-title" id="titreLienModal">Hearthstone</h3>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-md-4">
+										<a href="https://playhearthstone.com/fr-fr/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/f/f2/Hearthstone_2016_logo.png" alt="Logo Qwant" class="img-thumbnail"></a>
+									</div>
+									<div class="col-md-8">
+										<h5>Jeu de carte en ligne</h5>
+										<p class="text-muted">Hearthstone (anciennement Hearthstone: Heroes of Warcraft) est un jeu de cartes à collectionner en ligne, développé et édité par la société Blizzard Entertainment.
+										<br />
+										C'est un jeu gratuit (free to play) s'inspirant de l'univers de fiction médiéval-fantastique du jeu vidéo Warcraft développé par Blizzard.</p>
+										<p class="float-right font-italic">Liens créé le **/**/**** par Utilisateur</p>
+										<br/><br/>
+										<a class="btn btn-primary float-right" href="https://playhearthstone.com/fr-fr/" role="button"> Accéder au site &nbsp;<i class="fa d-inline fa-lg fa-link"></i></a>
+										<ul class="list-inline float-left">
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 1</a></li>
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 2</a></li>
+											<li class="list-inline-item"><a class="badge badge-info" href="">M-Clé 3</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+									<button class="btn btn-warning float-right" type="button" data-toggle="modal" data-target="#editModal" data-dismiss="modal"><i class="fas fa-edit fa-lg"></i></button>
+									<button class="btn btn-danger float-right" type="button" data-dismiss="modal"><i class="fas fa-trash-alt fa-lg"></i></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bas de page -->
+	<section class="bg-secondary p-2">
+		<div class="container">
+			<h3>Footer</h3>
+		</div>
+	</section>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+	    $('[data-toggle="tooltip"]').tooltip(); 
+	});
+</script>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/mytheme.css" type="text/css">
+	<link rel="icon">
+	<title>Annuaire de Liens - Nouveau Liens</title>
+</head>
+
+<body class="bg-light" >
+
+	<!-- Barre de navigation -->
+	<nav class="navbar navbar-light navbar-expand-md bg-secondary">
+		<div class="container">
+			<h1>Annuaire de liens internet</h1>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarAdmin" aria-controls="navbarAdmin" aria-expanded="true" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse text-center justify-content-end" id="navbarAdmin">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link active" href="adminLiens.html"><i class="fas fa-link"></i>&nbsp; Liens</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gestionUtilisateurs.html"><i class="fas fa-users"></i>&nbsp; Utilisateurs</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="profilUtilisateur.html"><i class="fas fa-user"></i>&nbsp; Profil</a>
+					</li>
+					<li class="nav-item">
+						<a class="btn btn-primary" href="indexVisiteur.html" data-toggle="tooltip" data-placement="bottom" title="Déconnexion"><i class="fas fa-power-off"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row mt-2">
+			<div class="col-md-12 mb-2">
+
+				<!-- Formulaire de saisie du Nouveau Lien -->
+				<form action="#" method="POST">
+					<div class="card">
+						<div class="card-header bg-info">
+							<h5 class="text-center">Ajout d'un lien</h5>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-8">
+									<div class="row">
+										<div class="col-md-6">
+											<input id="nomLien" type="text" class="form-control" placeholder="Nom du lien">
+										</div>
+										<div class="col-md-6">
+											<input id="urlLien" type="text" class="form-control" placeholder="URL du lien">
+										</div>
+										<div class="col-md-12">
+											<input id="desciption" type="text" class="form-control" placeholder="Description">
+										</div>
+										<div class="col-md-12">
+											<textarea id="detailDescription" class="form-control" rows="8" placeholder="Description détaillée"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="input-group" >
+										<input name="motCle" type="text" class="form-control" placeholder="Mot Clé">
+										<div class="input-group-append">
+												<button type="submit" class="btn btn-secondary" type="button"><i class="fas fa-plus-circle fa-lg"></i></button>
+										</div>
+									</div>
+									<ul class="list-group">
+										<li class="list-group-item">M-clé 1</li>
+										<li class="list-group-item">M-clé 2</li>
+									</ul>
+									<div class="custom-file">
+										<input type="file" class="custom-file-input" id="inputGroupFile">
+										<label class="custom-file-label" for="inputGroupFile">Upload image</label>
+									</div>
+									<button class="btn btn-secondary float-right" type="button">Upload</button>
+								</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<button class="btn btn-primary" type="button">Annuler</button>
+							<button class="btn btn-success float-right" type="button"><i class="fas fa-plus-circle fa-lg"></i>&nbsp; Ajouter le lien</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bas de page -->
+	<section class="bg-secondary p-2">
+		<div class="container">
+			<h3>Footer</h3>
+		</div>
+	</section>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+	    $('[data-toggle="tooltip"]').tooltip(); 
+	});
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+$enable-shadows: true;
+$enable-gradients: true;
+
+
+
+$body-bg: #d3e9eb;
+$body-color: #151417;
+
+
+
+$border-radius: 8px;
+
+
+
+//~  Changing the theme colors
+$primary: #2d3580;
+$secondary: #9a95d9;
+$success: #2bc550;
+$info: #f6f3a4;
+$warning: #ef8143;
+$danger: #ff293a;
+$light: #dfe6ee;
+$dark: #0f1319;
+
+//~ Couleurs d'entête des cartes
+$theme-colors: (
+	"user": #38cdd9,
+	"link": #b1dc9a,
+	"add" : #ebcb7c
+);
